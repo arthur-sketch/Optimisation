@@ -1,0 +1,20 @@
+clear variables;
+close all;
+clc;
+
+
+
+xn=18;
+gamma=0.1;
+
+xn1=xn-gamma*2*xn;
+eps=10^(-6);
+
+
+
+while(xn1-xn<eps)
+    xn=xn1;
+    xn1=xn-gamma*2*xn;
+end
+
+disp(xn1);
